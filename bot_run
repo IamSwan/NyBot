@@ -4,8 +4,10 @@ from src.nybot import Nybot
 import dotenv
 import os
 
-dotenv.load_dotenv()
-TOKEN = os.getenv("TOKEN")
 
-bot = Nybot()
-bot.run(TOKEN)
+if __name__ == "__main__":
+    dotenv.load_dotenv()
+    TOKEN = os.getenv("TOKEN")
+
+    bot = Nybot()
+    bot.run(TOKEN)
